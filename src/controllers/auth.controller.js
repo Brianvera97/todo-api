@@ -7,6 +7,7 @@ const authController = {
             const { name, email, password } = req.body;
 
             const result = await authService.register({ name, email, password });
+            console.log(result);
 
             res.status(201).json({
                 success: true,
